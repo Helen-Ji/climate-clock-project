@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-logo {
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #d4d4d8;
+  font-size: 14px;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* HERO */
+.relevance-hero {
+  padding: 90px 60px 50px;
+  background:
+    radial-gradient(circle at top, rgba(239, 68, 68, 0.12), transparent 28%),
+    #000;
+}
+
+.hero-container,
+.section-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow,
+.section-eyebrow,
+.summary-eyebrow,
+.keyword-label {
+  color: rgba(239, 68, 68, 0.88);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 13px;
+}
+
+.hero-eyebrow,
+.section-eyebrow,
+.summary-eyebrow {
+  margin-bottom: 18px;
+}
+
+.relevance-hero h1 {
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+  max-width: 1000px;
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  color: #a1a1aa;
+  line-height: 1.7;
+  max-width: 960px;
+}
+
+/* INTRO */
+.relevance-intro {
+  padding: 30px 60px 40px;
+}
+
+.intro-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 26px;
+  padding: 28px;
+}
+
+.intro-card p {
+  color: #d4d4d8;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* KEYWORD SECTIONS */
+.keyword-section {
+  padding: 40px 60px;
+}
+
+.keyword-section.alt .keyword-card {
+  border-color: rgba(239, 68, 68, 0.22);
+  box-shadow: 0 16px 40px rgba(127, 29, 29, 0.1);
+}
+
+.keyword-card {
+  background: rgba(10, 10, 10, 0.78);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 30px;
+  padding: 34px;
+}
+
+.keyword-label {
+  margin-bottom: 16px;
+}
+
+.keyword-card h2 {
+  font-size: 46px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 22px;
+}
+
+.keyword-card p {
+  color: #d4d4d8;
+  font-size: 18px;
+  line-height: 1.95;
+}
+
+.keyword-card p + p {
+  margin-top: 20px;
+}
+
+/* SUMMARY */
+.relevance-summary {
+  padding: 50px 60px 100px;
+}
+
+.summary-box {
+  background: linear-gradient(180deg, rgba(41, 8, 8, 0.72), rgba(20, 7, 7, 0.72));
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  border-radius: 30px;
+  padding: 36px;
+  box-shadow: 0 18px 50px rgba(127, 29, 29, 0.16);
+}
+
+.summary-box h2 {
+  font-size: 46px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 22px;
+}
+
+.summary-box p {
+  color: #d4d4d8;
+  font-size: 18px;
+  line-height: 1.95;
+}
+
+.summary-box p + p {
+  margin-top: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .relevance-hero h1,
+  .keyword-card h2,
+  .summary-box h2 {
+    font-size: 44px;
+  }
+
+  .hero-subtitle,
+  .intro-card p,
+  .keyword-card p,
+  .summary-box p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .relevance-hero,
+  .relevance-intro,
+  .keyword-section,
+  .relevance-summary {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .relevance-hero {
+    padding-top: 60px;
+  }
+
+  .relevance-hero h1,
+  .keyword-card h2,
+  .summary-box h2 {
+    font-size: 32px;
+  }
+
+  .hero-subtitle,
+  .intro-card p,
+  .keyword-card p,
+  .summary-box p {
+    font-size: 16px;
+  }
+
+  .keyword-card,
+  .summary-box,
+  .intro-card {
+    padding: 22px;
+  }
+
+  .navbar {
+    position: static;
+  }
+
+  .nav-container {
+    padding: 16px 20px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+}

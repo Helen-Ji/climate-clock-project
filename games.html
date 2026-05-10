@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Games | Beyond the Number</title>
+  <link rel="stylesheet" href="games.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">Beyond the Number</div>
+        <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="games.html" class="active">Interactive Games</a>
+        <a href="scroll-story.html">Scroll Story</a>
+        <a href="relevance.html">Relevance</a>
+        <a href="interview.html">Interview</a>
+        <a href="compare.html">Compare</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="reference.html">Reference</a>
+        </nav>
+    </div>
+    </header>
+
+  <section class="games-hero">
+    <div class="games-hero-inner">
+      <p class="games-eyebrow">Interactive Games</p>
+      <h1>Play With the Problem</h1>
+      <p class="games-subtitle">
+        These games test what climate numbers make visible, what they leave out,
+        and how public visibility does not always become public understanding.
+      </p>
+    </div>
+  </section>
+
+  <!-- GAME 1 -->
+  <section class="game-section" id="guess-game">
+    <div class="section-container">
+      <div class="section-heading">
+        <p class="section-eyebrow">Game 1</p>
+        <h2>Guess the Number</h2>
+        <p class="section-subtext">
+          Climate change is often communicated through numbers. But do numbers
+          actually explain themselves?
+        </p>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-number" id="quiz-number">1.5°C</div>
+        <p class="quiz-question" id="quiz-question">What does this number mean?</p>
+
+        <div class="quiz-options" id="quiz-options"></div>
+
+        <div class="quiz-feedback hidden" id="quiz-feedback"></div>
+
+        <div class="quiz-story hidden" id="quiz-story"></div>
+
+        <div class="quiz-footer">
+          <p class="quiz-note">
+            Numbers can focus attention quickly. But attention is not the same as understanding.
+          </p>
+          <button class="next-btn" id="next-btn">Next Question</button>
+        </div>
+      </div>
+
+      <div class="purpose-box">
+        <h3>Purpose of this game</h3>
+        <p>
+          This game shows that a climate number can summarize danger very efficiently,
+          but it cannot fully explain who is harmed first, how that harm is felt in
+          daily life, or what action should follow. A number like 1.5°C or 420 ppm
+          sounds precise and authoritative, but it often hides the human, political,
+          and emotional dimensions of crisis. The Climate Clock depends on this same
+          tension: numerical urgency is powerful, but it does not tell the whole story.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME 2 -->
+  <section class="game-section" id="find-game">
+    <div class="section-container">
+      <div class="section-heading">
+        <p class="section-eyebrow">Game 2</p>
+        <h2>Find the Climate Clock</h2>
+        <p class="section-subtext">
+          In a crowded public environment, even a large warning can be missed.
+          Can you find the Climate Clock in the image below?
+        </p>
+      </div>
+
+      <div class="find-card">
+        <div class="find-image-wrap">
+            <img src="unionSquare.jpg" alt="Scene for finding the Climate Clock" class="find-image" />
+
+            <!-- Clickable climate clock logo -->
+            <button class="clock-hotspot" id="clock-hotspot" aria-label="Hidden Climate Clock">
+                <img src="logo.jpg" alt="Climate Clock logo" class="clock-hotspot-image" />
+            </button>
+        </div>
+
+        <div class="find-feedback hidden" id="find-feedback">
+          Congratulations — you found the Climate Clock. But finding it is not the same as
+          understanding it. Public visibility does not automatically create public meaning.
+        </div>
+      </div>
+
+      <div class="purpose-box">
+        <h3>Purpose of this game</h3>
+        <p>
+          This section shows that public visibility is not the same as public understanding.
+          Even if the Climate Clock is physically large, illuminated, and installed in a public
+          square, people may still walk past it, overlook it, misunderstand what it measures,
+          or not know what to do after seeing it. The problem is not just whether the clock is
+          visible. The deeper issue is whether the message becomes legible, emotionally meaningful,
+          and politically actionable in the middle of urban distraction and overload.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const quizData = [
+      {
+        number: "1.5°C",
+        question: "What does this number mean?",
+        options: [
+          "Average summer temperature in New York",
+          "A major global warming threshold",
+          "Annual sea-level rise target",
+          "Heatwave warning level"
+        ],
+        answer: 1,
+        feedback:
+          "1.5°C is a major warming threshold in climate science. It is often used as a political and scientific marker for avoiding much more severe climate disruption.",
+        story:
+          "But this number does not tell you what climate crisis feels like on the ground. It does not show whose homes flood first, whose neighborhoods experience deadly heat, or who has the least protection. The number is precise, but the lived consequences are uneven and deeply human."
+      },
+      {
+        number: "420 ppm",
+        question: "What does this number refer to?",
+        options: [
+          "Atmospheric carbon dioxide concentration",
+          "The number of annual climate protests",
+          "A global air quality index",
+          "The amount of ice lost in one year"
+        ],
+        answer: 0,
+        feedback:
+          "420 ppm refers to the concentration of carbon dioxide in the atmosphere. It is a scientific measure of how much greenhouse gas has accumulated in the air.",
+        story:
+          "For many people, 420 ppm sounds abstract and emotionally empty. It does not feel like smoke in your lungs, heat in your apartment, or anxiety about the future. Data can be accurate and urgent while still feeling distant."
+      },
+      {
+        number: "$1 billion",
+        question: "In climate reporting, what does this number often represent?",
+        options: [
+          "Annual renewable energy investment",
+          "Estimated green job creation",
+          "Disaster-related economic damage",
+          "The global climate aid budget"
+        ],
+        answer: 2,
+        feedback:
+          "$1 billion often refers to disaster-related financial loss, such as the damage caused by storms, floods, or wildfires.",
+        story:
+          "Economic loss can make crisis legible to governments, insurers, and news organizations, but it can also flatten human suffering into cost. A billion-dollar disaster sounds enormous, yet it still cannot capture grief, displacement, trauma, or the unequal burdens carried by vulnerable communities."
+      }
+    ];
+
+    let currentQuiz = 0;
+    let answered = false;
+
+    const quizNumber = document.getElementById("quiz-number");
+    const quizQuestion = document.getElementById("quiz-question");
+    const quizOptions = document.getElementById("quiz-options");
+    const quizFeedback = document.getElementById("quiz-feedback");
+    const quizStory = document.getElementById("quiz-story");
+    const nextBtn = document.getElementById("next-btn");
+
+    function renderQuiz() {
+      const item = quizData[currentQuiz];
+      answered = false;
+
+      quizNumber.textContent = item.number;
+      quizQuestion.textContent = item.question;
+      quizFeedback.textContent = item.feedback;
+      quizStory.textContent = item.story;
+
+      quizFeedback.classList.add("hidden");
+      quizStory.classList.add("hidden");
+      quizOptions.innerHTML = "";
+
+      item.options.forEach((option, index) => {
+        const btn = document.createElement("button");
+        btn.className = "quiz-option";
+        btn.textContent = option;
+
+        btn.addEventListener("click", () => {
+          if (answered) return;
+          answered = true;
+
+          const allOptions = document.querySelectorAll(".quiz-option");
+
+          allOptions.forEach((optionBtn, optionIndex) => {
+            if (optionIndex === item.answer) {
+              optionBtn.classList.add("correct");
+            } else if (optionIndex === index && optionIndex !== item.answer) {
+              optionBtn.classList.add("wrong");
+            }
+          });
+
+          quizFeedback.classList.remove("hidden");
+          quizStory.classList.remove("hidden");
+        });
+
+        quizOptions.appendChild(btn);
+      });
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentQuiz = (currentQuiz + 1) % quizData.length;
+      renderQuiz();
+    });
+
+    renderQuiz();
+
+    // Find the clock game
+    const hotspot = document.getElementById("clock-hotspot");
+    const findFeedback = document.getElementById("find-feedback");
+
+    hotspot.addEventListener("click", () => {
+      findFeedback.classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>

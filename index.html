@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond the Number</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">Beyond the Number</div>
+        <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="games.html">Interactive Games</a>
+        <a href="scroll-story.html">Scroll Story</a>
+        <a href="relevance.html">Relevance</a>
+        <a href="interview.html">Interview</a>
+        <a href="compare.html">Compare</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="reference.html">Reference</a>
+        </nav>
+    </div>
+    </header>
+
+  <!-- HOME HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-eyebrow">Climate Clock in New York Union Square</p>
+        <h1 class="hero-title">Beyond the Number</h1>
+        <p class="hero-subtitle">
+          The NYC Climate Clock and the Limits of Climate Data
+        </p>
+
+        <p class="hero-hook">How much can a number make you feel?</p>
+
+        <p class="hero-description">
+          This website explores how the Climate Clock in Union Square turns climate
+          science into a public countdown. It asks whether a giant number can create
+          urgency, understanding, and emotional connection—or whether it risks making
+          the climate crisis feel abstract.
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="countdown-card">
+            <div class="real-clock-card">
+                <div class="clock-top-row">
+                <div class="clock-top-label">DEADLINE</div>
+                <div class="clock-top-text">TIME LEFT TO LIMIT GLOBAL WARMING TO 1.5°C</div>
+                </div>
+
+                <div class="clock-hover-area">
+                <div class="clock-main-content">
+                    <div class="clock-deadline-row">
+                    <div class="deadline-years">
+                        <span class="deadline-big" id="years">3</span>
+                        <span class="deadline-unit">YRS</span>
+                    </div>
+
+                    <div class="deadline-main">
+                        <span class="deadline-days" id="days">078</span>
+                        <span class="deadline-days-label">DAYS</span>
+                        <span class="deadline-time" id="clock-time">16:57:34</span>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="hover-words-real">
+                    <span>heat</span>
+                    <span>fear</span>
+                    <span>flood</span>
+                    <span>smoke</span>
+                    <span>loss</span>
+                    <span>survival</span>
+                </div>
+                </div>
+            </div>
+
+            <p class="countdown-note">
+                Hover over the clock. The deadline flickers into the feelings and realities behind the number.
+            </p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-down">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section class="intro-section">
+    <div class="section-container">
+      <div class="section-heading">
+        <p class="section-eyebrow">Introduction</p>
+        <h2>What is the Climate Clock?</h2>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-image-card">
+          <div class="intro-real-image">
+            <img src="clock1.jpg" alt="The Climate Clock in Union Square, New York" />
+          </div>
+        </div>
+
+        <div class="intro-text-card">
+          <div class="intro-block">
+            <h3>What is the Climate Clock?</h3>
+            <p>
+              The Climate Clock in Union Square is a public installation that displays
+              a countdown tied to the remaining carbon budget for limiting global warming.
+              It transforms climate science into a giant digital timer visible in everyday
+              city life. It calls on people to take climate issues seriously.
+            </p>
+          </div>
+
+          <div class="intro-block">
+            <h3>Why does this website exist?</h3>
+            <p>
+              This website exists to study the Climate Clock not just as a piece of public
+              art, but as a media object. It asks how climate data becomes a public image,
+              how numbers shape feeling, and what might be missing when crisis is communicated
+              mainly through a countdown.
+            </p>
+          </div>
+
+          <div class="intro-block">
+            <h3>My research question:</h3>
+            <p>
+              When climate change is represented through numbers, countdowns, and scientific data, does it really help people understand the crisis? Or does it create anxiety without deeper understanding?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE REAL IMAGES -->
+  <section class="gallery-section">
+    <div class="section-container">
+        <div class="section-heading">
+        <p class="section-eyebrow">Images</p>
+        <h2>Images of the Climate Clock</h2>
+        </div>
+
+        <div class="gallery-grid">
+        <div class="gallery-card">
+            <img
+            src="clock3.jpeg"
+            alt="Climate Clock view at night in Union Square"
+            />
+        </div>
+
+        <div class="gallery-card">
+            <img
+            src="clock4.jpg"
+            alt="People looking at the Climate Clock in Union Square"
+            />
+        </div>
+
+        <div class="gallery-card">
+            <img
+            src="clock2.jpg"
+            alt="Another view of the Climate Clock in Union Square"
+            />
+        </div>
+        </div>
+    </div>
+    </section>
+
+  <!-- PLAY CTA -->
+  <section class="play-section" id="games">
+    <div class="play-box">
+      <p class="play-text">Ready to play some games?</p>
+      <a href="games.html" class="play-btn">Play</a>
+    </div>
+  </section>
+
+<script>
+  const STORAGE_KEY = "climateClockEndTime";
+
+  const startYears = 3;
+  const startDays = 78;
+  const startHours = 15;
+  const startMinutes = 9;
+  const startSeconds = 23;
+
+  function createEndTimeFromStartingValue() {
+    const totalSeconds =
+      (((startYears * 365 + startDays) * 24 + startHours) * 60 + startMinutes) * 60 + startSeconds;
+
+    return Date.now() + totalSeconds * 1000;
+  }
+
+  // change this to false after you finish testing
+  const FORCE_RESET = false;
+
+  if (FORCE_RESET || !localStorage.getItem(STORAGE_KEY)) {
+    localStorage.setItem(STORAGE_KEY, createEndTimeFromStartingValue());
+  }
+
+  function renderCountdown() {
+    const endTime = parseInt(localStorage.getItem(STORAGE_KEY), 10);
+    let distance = Math.floor((endTime - Date.now()) / 1000);
+
+    if (distance < 0) distance = 0;
+
+    const years = Math.floor(distance / (365 * 24 * 60 * 60));
+    distance %= 365 * 24 * 60 * 60;
+
+    const days = Math.floor(distance / (24 * 60 * 60));
+    distance %= 24 * 60 * 60;
+
+    const hours = Math.floor(distance / (60 * 60));
+    distance %= 60 * 60;
+
+    const minutes = Math.floor(distance / 60);
+    const seconds = distance % 60;
+
+    document.getElementById("years").textContent = String(years);
+    document.getElementById("days").textContent = String(days).padStart(3, "0");
+    document.getElementById("clock-time").textContent =
+      String(hours).padStart(2, "0") + ":" +
+      String(minutes).padStart(2, "0") + ":" +
+      String(seconds).padStart(2, "0");
+  }
+
+  renderCountdown();
+  setInterval(renderCountdown, 1000);
+</script>
+</body>
+</html>
